@@ -4,9 +4,13 @@ const IS_DEV = process.env.APP_VARIANT === "development";
 
 export default {
   expo: {
+    "extra": {
+      "eas": {
+        "projectId": "4b5f6108-db4b-4615-a22c-27cd37c5c9ba"
+      }
+    },
     name: IS_DEV ? "HCB (dev)" : "HCB",
     slug: "hcb-mobile",
-    owner: "hackclub",
     version: "1.0.0",
     scheme: "hcb",
     orientation: "portrait",
@@ -41,11 +45,6 @@ export default {
     },
     web: {
       bundler: "metro",
-    },
-    extra: {
-      eas: {
-        projectId: "dfc97c77-31b1-4267-896f-9472c87f166c",
-      },
     },
     plugins: [
       [
